@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from random import randint
+
 palabraAdivinar = ""
 listaPalabraAdiv = []
 listaPalabraMost = []
@@ -8,9 +10,20 @@ letra = ""
 run = True
 
 print ("AHORCADO")
-palabraAdivinar = input("Dime una palabra: ")
 
-listaPalabraAdiv = list(palabraAdivinar)
+palabras = []
+
+while True:
+    palabraAdivinar = input("Dime una palabra: ")
+    
+    if len(palabraAdivinar) == 0:
+        break
+    else:
+        palabras.append(palabraAdivinar)
+
+posicion = randint(0, len(palabras) - 1)
+
+listaPalabraAdiv = list(palabras[posicion])
 
 for item in listaPalabraAdiv:
   listaPalabraMost.append('_')
