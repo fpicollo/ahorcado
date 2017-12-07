@@ -3,6 +3,7 @@
 from random import randint
 
 palabraAdivinar = ""
+palabras = []
 listaPalabraAdiv = []
 listaPalabraMost = []
 intentos = 5
@@ -10,8 +11,6 @@ letra = ""
 run = True
 
 print ("AHORCADO")
-
-palabras = []
 
 while True:
     palabraAdivinar = input("Dime una palabra: ")
